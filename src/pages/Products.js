@@ -20,7 +20,7 @@ const Products = () => {
     return (
         <> 
             {state.loading && <Loading />}
-            <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-12 py-6 md:py-10 px-4 md:px-16'>
+            <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-10 pb-6 pt-24 md:pb-10 md:pt-36 px-4 md:px-16'>
                 {!state.loading && state.products.map(product => (
                     <Product key={product.id} data={product} />
                 ))}         
