@@ -25,9 +25,9 @@ const Products = () => {
                 </div>
             )}
             {!state.loading && (
-                <div className='container py-6 md:py-12 px-4 md:px-16'>
+                <div className='container py-6 md:py-12 px-4 lg:px-16'>
                     <h2 className='text-2xl font-medium border-b-4 border-blue-600 inline-block pb-1 pr-4 mb-6'>Products</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                         {state.products.map(product => (
                             <Product key={product.id} data={product} />
                         ))} 

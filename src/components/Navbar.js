@@ -51,10 +51,10 @@ const Navbar = () => {
                         <NavLink to='/products'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Products</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contactus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Contact Us</NavLink>
+                        <NavLink to='/aboutus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>About Us</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/aboutus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>About Us</NavLink>
+                        <NavLink to='/contactus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Contact Us</NavLink>
                     </li>
                 </ul>
                 <ul className={`list-none bg-white bg-opacity-80 py-4 flex flex-col items-center gap-y-6 md:hidden transition-all duration-700 ${openMenu ? 'translate-y-0' : '-translate-y-96'}`}>
@@ -65,10 +65,10 @@ const Navbar = () => {
                         <NavLink to='/products'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Products</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contactus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Contact Us</NavLink>
+                        <NavLink to='/aboutus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>About Us</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/aboutus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>About Us</NavLink>
+                        <NavLink to='/contactus'  className='text-gray-800 text-lg hover:text-blue-600 px-1'>Contact Us</NavLink>
                     </li>
                 </ul>
             </div>
