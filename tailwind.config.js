@@ -6,7 +6,11 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      transformOrigin: {
+        'middle': '2px'
+      }
+    },
   },
   plugins: [],
 }

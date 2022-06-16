@@ -2,9 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { shorten, sumItems } from '../helpers/functions';
 
 // Icons
-import Miuns from '../assets/icons/Miuns';
-import Plus from '../assets/icons/Plus';
-import Trash from '../assets/icons/Trash';
+import { FaTrash, FaPlus, FaMinus } from 'react-icons/fa';
 
 // Actions
 import {removeItem, increase, decrease} from '../redux/cart/cartAction'
@@ -62,21 +60,21 @@ const Cart = ({data}) => {
             <div className='flex items-center gap-2'>
                 {/* Trash btn */}
                 {quantity === 1 && (
-                        <button onClick={removeItemHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 p-1 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                            <Trash />
+                        <button onClick={removeItemHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 p-1 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                            <FaTrash />
                         </button>
                     )}
 
                     {/* Decrease btn */}
                     {quantity > 1 && (
-                    <button onClick={decreaseHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                        <Miuns />
+                    <button onClick={decreaseHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                        <FaMinus />
                     </button>)}
 
                     {/* Increase btn */}
                     {quantity > 0 && (
-                    <button onClick={increaseHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                        <Plus />
+                    <button onClick={increaseHandler} className='bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                        <FaPlus />
                     </button>)}
             </div>
         </div>

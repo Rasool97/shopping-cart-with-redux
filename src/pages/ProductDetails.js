@@ -16,7 +16,7 @@ const ProductDetails = () => {
 
     
     return (
-        <section className='py-6 md:py-10 px-4 md:px-16 w-full min-h-screen bg-gray-100'>
+        <section className='w-full min-h-[calc(100vh-8.5rem)] py-8 px-4 lg:px-12 flex items-center justify-center'>
             
             {state.loading && <Loading />}
 
@@ -36,7 +36,7 @@ const ProductDetails = () => {
                         </p>
                         <div className='flex justify-between items-center'>
                             <span className='bg-green-600 text-white text-xs sm:text-sm md:text-base py-2 px-3 rounded-md'>{state.product.price} $</span>
-                            <Link className='bg-blue-600 text-white font-medium text-xs sm:text-sm md:text-base py-2 px-3 rounded-md transition-colors hover:bg-blue-900'  to='/products'>Back to Shop</Link>
+                            <Link className='btn font-medium sm:text-sm md:text-base'  to='/products'>Back to Shop</Link>
                         </div>
                     </div>
                 </div>

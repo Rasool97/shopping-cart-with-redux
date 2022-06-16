@@ -19,12 +19,22 @@ const Products = () => {
     
     return (
         <> 
-            {state.loading && <Loading />}
-            <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-10 pb-6 pt-24 md:pb-10 md:pt-36 px-4 md:px-16'>
-                {!state.loading && state.products.map(product => (
-                    <Product key={product.id} data={product} />
-                ))}         
-            </div>
+            {state.loading && (
+                <div className='min-h-[calc(100vh-8rem)] w-full flex items-center justify-center'>
+                    <Loading />
+                </div>
+            )}
+            {!state.loading && (
+                <div className='container py-6 md:py-12 px-4 md:px-16'>
+                    <h2 className='text-2xl font-medium border-b-4 border-blue-600 inline-block pb-1 pr-4 mb-6'>Products</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {state.products.map(product => (
+                            <Product key={product.id} data={product} />
+                        ))} 
+                    </div>        
+                </div>
+            )}
+
         </>
     );
 };

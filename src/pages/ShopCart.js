@@ -17,7 +17,7 @@ const ShopCart = () => {
     }
 
     return (
-        <section className='container px-4 md:px-16 py-6 md:py-10 grid grid-cols-1 lg:grid-cols-9 gap-8'>
+        <section className='container min-h-[calc(100vh-8rem)] py-16 px-4 md:px-16 grid grid-cols-1 lg:grid-cols-9 gap-8'>
             {/* Carts */}
             <div className='w-full flex flex-col gap-4 order-2 lg:order-1 lg:col-span-6'>
                 {!!state.selectedItems.length && state.selectedItems.map(item => (
@@ -55,7 +55,7 @@ const ShopCart = () => {
             {state.selectedItems.length === 0 && !state.checkout && (
                 <div className='flex flex-col gap-y-10 items-center justify-center col-span-full'>
                     <p className='text-xl font-bold text-emerald-700'>Want to buy?</p>
-                    <Link className='bg-blue-600 text-white px-3 py-1 rounded-md' to='/products'>Go to shop</Link>
+                    <Link className='btn font-medium' to='/products'>Go to shop</Link>
                 </div>
             )}
 
@@ -63,7 +63,7 @@ const ShopCart = () => {
             {state.checkout && (
                 <div className='flex flex-col gap-y-10 items-center justify-center col-span-full'>
                     <p className='text-xl font-bold text-emerald-700'>Checked out successfully</p>
-                    <Link className='bg-blue-600 text-white px-3 py-1 rounded-md' to='/products'>Buy more</Link>
+                    <Link className='btn font-medium' to='/products'>Buy more</Link>
                 </div>
             )}
         </section>

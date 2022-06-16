@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { quantityCount, shorten, sumItems } from '../helpers/functions';
 
 // Icons
-import Trash from '../assets/icons/Trash';
-import Miuns from '../assets/icons/Miuns';
-import Plus from '../assets/icons/Plus';
+import { FaTrash, FaPlus, FaMinus } from 'react-icons/fa';
 
 // Actions
 import {addItem, removeItem, increase, decrease} from '../redux/cart/cartAction'
@@ -79,21 +77,21 @@ const Product = ({data}) => {
                 <div className='flex justify-between gap-x-2 items-center'>
                     {/* Add to cart btn */}
                     {quantityCount(state.selectedItems, id) < 1 && (
-                    <button onClick={addItemHandler} className='bg-blue-600 text-white px-3 py-1 rounded-md transition-colors hover:bg-blue-900'>
+                    <button onClick={addItemHandler} className='btn font-medium'>
                         Add to Cart
                     </button>)}
                     
                     {/* Trash btn */}
                     {quantityCount(state.selectedItems, id) === 1 && (
-                        <button onClick={removeItemHandler} className='bg-blue-600 text-white w-8 h-8 p-1 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                            <Trash />
+                        <button onClick={removeItemHandler} className='bg-blue-600 text-white w-8 h-8 p-1 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                            <FaTrash />
                         </button>
                     )}
 
                     {/* Decrease btn */}
                     {quantityCount(state.selectedItems, id) > 1 && (
-                    <button onClick={decreaseHandler} className='bg-blue-600 text-white w-8 h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                        <Miuns />
+                    <button onClick={decreaseHandler} className='bg-blue-600 text-white w-8 h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                        <FaMinus />
                     </button>)}
 
                     {/* Count product */}
@@ -105,8 +103,8 @@ const Product = ({data}) => {
 
                     {/* Increase btn */}
                     {quantityCount(state.selectedItems, id) > 0 && (
-                    <button onClick={increaseHandler} className='bg-blue-600 text-white w-8 h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-900'>
-                        <Plus />
+                    <button onClick={increaseHandler} className='bg-blue-600 text-white w-8 h-8 flex justify-center items-center rounded-md transition-colors hover:bg-blue-800'>
+                        <FaPlus />
                     </button>)}
                 </div>
             </div>
